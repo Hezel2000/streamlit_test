@@ -2,18 +2,15 @@ import streamlit as st
 import pandas as pd
 import matplotlib.pyplot as plt
 
-st.title('Hello World')
-
+st.title('Plot Georoc Datasets')
 st.write('*Data Science Course 2024*')
 
 df = pd.read_csv('data/Bastar Craton.csv')
-
 cat_names = df.columns.tolist()[27:]
 
-col1, col2 = st.columns(2)
-
 st.multiselect('select datasets', [1,2,3])
-st.write('test')
+
+col1, col2 = st.columns(2)
 
 with col1:
     el1 = st.selectbox('x-axis', cat_names)
