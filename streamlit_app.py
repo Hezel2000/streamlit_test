@@ -6,7 +6,7 @@ st.title('NFDI4Earth Streamlit Test Page')
 
 passwd = st.text_input('input password')
 
-if passwd == '123password':
+if passwd == st.secrets['app_password']:
     df = pd.read_csv('data/Bastar Craton.csv')
 
     elements = df.columns.tolist()[27:]
